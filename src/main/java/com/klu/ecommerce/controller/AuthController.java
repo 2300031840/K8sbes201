@@ -7,19 +7,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(
-    origins = "*",
-    allowedHeaders = "*",
-    methods = {
-        RequestMethod.GET,
-        RequestMethod.POST,
-        RequestMethod.PUT,
-        RequestMethod.DELETE,
-        RequestMethod.OPTIONS
-    }
-)
+@CrossOrigin
 public class AuthController {
-
     private final UserService userService;
 
     public AuthController(UserService userService) {
